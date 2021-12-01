@@ -7,9 +7,36 @@ import modelo.PersonaAfectada;
 public class DesatreNatural {
 	private int personasAfectadas;
 	private int impactoEconomico;
-	public Fecha unnamed_Fecha_;
+	public Fecha Fecha;
 	public ArrayList<Lugar> lugaresAfectados = new ArrayList<Lugar>();
-	public ArrayList<PersonaAfectada> personasAfectadas = new ArrayList<PersonaAfectada>();
+	public ArrayList<PersonaAfectada> personasAfectada = new ArrayList<PersonaAfectada>();
+
+	public DesatreNatural(int personasAfectadas, int impactoEconomico, Fecha Fecha, ArrayList<Lugar> lugaresAfectados, ArrayList<PersonaAfectada> personasAfectadas1) {
+		Fecha fecha = new Fecha();
+		this.personasAfectadas = personasAfectadas;
+		this.impactoEconomico = impactoEconomico;
+		this.Fecha = Fecha;
+		this.lugaresAfectados = lugaresAfectados;
+		this.personasAfectada = personasAfectadas1;
+	}
+	public PersonaAfectada agregarPersonaAfectada(String nombre ,int edad,Boolean estadoFallecido, Boolean estadoHerido, Boolean estadoDesaparecido ) {
+		PersonaAfectada personaAfectada = new PersonaAfectada(nombre, edad,estadoFallecido,estadoHerido,estadoDesaparecido);
+		this.personasAfectada.add(personaAfectada);
+		return personaAfectada;
+	}
+	public Lugar agregarLugarAfectado(String pais, String ciudad, String latitud, String longitud ) {
+		Lugar lugarAfectado = new Lugar(pais,ciudad,latitud,longitud);
+		this.lugaresAfectados.add(lugarAfectado);
+		return lugarAfectado;
+	}
+	public void visualizarLugarAfectado() {
+		for (int i =0 ; i <lugaresAfectados.size(); i++){
+			System.out.println("["+lugaresAfectados.get(i).getPais()+"]");
+			System.out.println("["+lugaresAfectados.get(i).getCiudad()+"]");
+			System.out.println("["+lugaresAfectados.get(i).getLatitud()+"]");
+			System.out.println("["+lugaresAfectados.get(i).getLongitud()+"]");
+		}
+	}
 
 	public void listaDesaparecidos() {
 		throw new UnsupportedOperationException();

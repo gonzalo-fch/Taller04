@@ -6,8 +6,11 @@ public class Lugar {
 	private String latitud;
 	private String longitud;
 
-	public Lugar() {
-		throw new UnsupportedOperationException();
+	public Lugar(String pais, String ciudad, String latitud, String longitud) {
+		this.pais = pais;
+		this.ciudad = ciudad;
+		this.latitud = latitud;
+		this.longitud = longitud;
 	}
 
 	public String getPais() {

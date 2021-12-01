@@ -5,8 +5,11 @@ public class PersonaAfectada extends Persona {
 	private Boolean estadoHerido;
 	private Boolean estadoDesaparecido;
 
-	public PersonaAfectada() {
-
+	public PersonaAfectada(String nombre ,int edad,Boolean estadoFallecido, Boolean estadoHerido, Boolean estadoDesaparecido) {
+		super(nombre,edad);
+		this.estadoFallecido = estadoFallecido;
+		this.estadoHerido = estadoHerido;
+		this.estadoDesaparecido = estadoDesaparecido;
 	}
 
 	public Boolean getestadoFallecido() {
