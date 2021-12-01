@@ -1,0 +1,8 @@
+subconjunto seeccionado:Geofisico
+Esta conformado por personas afectadas por el desastre, tiene una hora cuando sucedio el hecho
+ademas de un lugar o lugares que se vieron afectados. Ademas de los daños economicos que el desastre
+causo.
+DesastreNatural tiene asociado una fecha,  y se compone de Ciudades afectadas como tambien de personas afectadas mediante una composicion fuerte
+Persona y PersonaAfectada  tienen una relacion de herencia
+
+Luego una clase geofisico depende de DesastreNatural
